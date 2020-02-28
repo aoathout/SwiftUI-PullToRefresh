@@ -39,7 +39,8 @@ public struct RefreshableList<Content: View>: View {
     @Binding var pullStatus: CGFloat
     let action: () -> Void
     let content: () -> Content
-    init(showRefreshView: Binding<Bool>, pullStatus: Binding<CGFloat>, action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
+    
+    public init(showRefreshView: Binding<Bool>, pullStatus: Binding<CGFloat>, action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
         self._showRefreshView = showRefreshView
         self._pullStatus = pullStatus
         self.action = action
